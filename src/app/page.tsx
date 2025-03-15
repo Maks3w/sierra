@@ -1,25 +1,30 @@
 "use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import {useState} from 'react';
 import Header from '../components/Header';
 import PeakSelector from '../components/PeakSelector';
 import WebcamCard from '../components/WebcamCard';
 import peaks from '../config/peaksConfig';
-import {Peak, Webcam} from '@/config/peaks';
+import {Peak} from '@/config/peaks';
+import Carousel from '../components/Carousel';
 
 export default function Home() {
     const [selectedPeak, setSelectedPeak] = useState<Peak>(peaks[0]);
-    const [modalImage, setModalImage] = useState<string | null>(null);
-    const [modalLoading, setModalLoading] = useState(false);
+    const [carouselVisible, setCarouselVisible] = useState(false);
+    const [carouselIndex, setCarouselIndex] = useState(0);
+    const [imageUrls, setImageUrls] = useState(() => selectedPeak.webcams.map(webcam => webcam.url));
 
-    const openModal = (webcam: Webcam, url: string) => {
-        setModalImage(url);
-        setModalLoading(true);
+    const onRefreshWebcam = (index: number, newUrl: string) => {
+        setImageUrls(imageUrls.map((url, i) => i === index ? newUrl : url));
     };
 
-    const closeModal = () => {
-        setModalImage(null);
+    const openCarousel = (index: number) => {
+        setCarouselIndex(index);
+        setCarouselVisible(true);
+    };
+
+    const closeCarousel = () => {
+        setCarouselVisible(false);
     };
 
     return (
@@ -33,31 +38,18 @@ export default function Home() {
                         <WebcamCard
                             key={webcam.name}
                             webcam={webcam}
-                            handleClick={openModal}
+                            onRefresh={(newUrl) => onRefreshWebcam(index, newUrl)}
+                            onClick={() => openCarousel(index)}
                         />
                     ))}
                 </div>
             </main>
-            {modalImage && (
-                <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={closeModal}>
-                    <div className="relative">
-                        {modalLoading && (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75">
-                                <div className="loader"></div>
-                            </div>
-                        )}
-                        <Image
-                            src={modalImage}
-                            alt="Full Size Image"
-                            width={1600}
-                            height={1200}
-                            className="max-w-full h-auto"
-                            onLoad={() => setModalLoading(false)}
-                            onError={() => setModalLoading(false)}
-                        />
-                        <button className="absolute top-2 right-2 text-white text-2xl" onClick={closeModal}>&times;</button>
-                    </div>
-                </div>
+            {carouselVisible && (
+                <Carousel
+                    images={selectedPeak.webcams.map(webcam => webcam.url)}
+                    initialIndex={carouselIndex}
+                    onClose={closeCarousel}
+                />
             )}
         </div>
     );

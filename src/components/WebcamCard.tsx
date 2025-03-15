@@ -1,13 +1,14 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
-import { Webcam } from '@/config/peaks';
+import {useEffect, useState} from 'react';
+import {Webcam} from '@/config/peaks';
 
 interface WebcamCardProps {
-    webcam: Webcam;
-    handleClick: (webcam: Webcam, url: string) => void;
+    webcam: Webcam,
+    onClick: () => void,
+    onRefresh: (newUrl: string) => void
 }
 
-const WebcamCard = ({ webcam, handleClick }: WebcamCardProps) => {
+const WebcamCard = ({webcam, onClick, onRefresh}: WebcamCardProps) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [imageUrl, setImageUrl] = useState(`${webcam.url}?refresh=true`);
@@ -23,13 +24,17 @@ const WebcamCard = ({ webcam, handleClick }: WebcamCardProps) => {
     };
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setLoading(true);
-            setImageUrl(`${webcam.url}?${new Date().getTime()}`);
-        }, webcam.refreshInterval * 60 * 1000);
-
+        const interval = setInterval(refreshHandler, webcam.refreshInterval * 60 * 1000);
         return () => clearInterval(interval);
     }, [webcam]);
+
+    const refreshHandler = ()=> {
+        setLoading(true);
+
+        const newUrl = `${webcam.url}?${new Date().getTime()}`;
+        setImageUrl(newUrl);
+        onRefresh(newUrl);
+    };
 
     return (
         <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
@@ -44,12 +49,11 @@ const WebcamCard = ({ webcam, handleClick }: WebcamCardProps) => {
                     <Image
                         src={imageUrl}
                         alt={webcam.name}
-                        layout="responsive"
                         width={800}
                         height={600}
                         className="max-w-full h-auto cursor-pointer"
                         loading="lazy"
-                        onClick={() => handleClick(webcam, imageUrl)}
+                        onClick={onClick}
                         onLoad={handleImageLoad}
                         onError={handleImageError}
                     />
