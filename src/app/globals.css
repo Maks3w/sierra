@@ -51,3 +51,22 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+.carousel-image {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image-enter {
+  opacity: 0;
+}
+
+.carousel-image-enter-active {
+  opacity: 1;
+}
+
+.carousel-image-exit {
+  opacity: 1;
+}
+
+.carousel-image-exit-active {
+  opacity: 0;
+}
