@@ -11,23 +11,14 @@ interface CarouselProps {
 
 const Carousel = ({ images, initialIndex, onClose, autoplayInterval = 3000 }: CarouselProps) => {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
-    const [transitionClass, setTransitionClass] = useState('carousel-image-enter');
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const prevImage = () => {
-        setTransitionClass('carousel-image-exit');
-        setTimeout(() => {
-            setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-            setTransitionClass('carousel-image-enter');
-        }, 500);
+        setCurrentIndex((currentIndex - 1 + images.length) % images.length);
     };
 
     const nextImage = () => {
-        setTransitionClass('carousel-image-exit');
-        setTimeout(() => {
-            setCurrentIndex((currentIndex + 1) % images.length);
-            setTransitionClass('carousel-image-enter');
-        }, 500);
+        setCurrentIndex((currentIndex + 1) % images.length);
     };
 
     const bind = useDrag(({ swipe: [swipeX] }) => {
@@ -36,6 +27,7 @@ const Carousel = ({ images, initialIndex, onClose, autoplayInterval = 3000 }: Ca
     });
 
     useEffect(() => {
+        console.log(currentIndex);
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'ArrowLeft') {
                 prevImage();
@@ -50,10 +42,6 @@ const Carousel = ({ images, initialIndex, onClose, autoplayInterval = 3000 }: Ca
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [currentIndex]);
-
-    useEffect(() => {
-        setTransitionClass('carousel-image-enter-active');
     }, [currentIndex]);
 
     useEffect(() => {
@@ -76,7 +64,7 @@ const Carousel = ({ images, initialIndex, onClose, autoplayInterval = 3000 }: Ca
                     alt={`Image ${currentIndex + 1}`}
                     width={1600}
                     height={1200}
-                    className={`max-w-full h-auto ${transitionClass}`}
+                    className={`max-w-full h-auto`}
                 />
                 <button className="absolute top-2 right-2 text-2xl z-1" onClick={onClose}>&times;</button>
             </div>

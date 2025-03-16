@@ -1,14 +1,12 @@
 import Image from 'next/image';
-import {useEffect, useState} from 'react';
-import {Webcam} from '@/config/peaks';
+import { useEffect, useState } from 'react';
+import { Webcam } from '@/config/peaks';
 
 interface WebcamCardProps {
-    webcam: Webcam,
-    onClick: () => void,
-    onRefresh: (newUrl: string) => void
+    webcam: Webcam;
 }
 
-const WebcamCard = ({webcam, onClick, onRefresh}: WebcamCardProps) => {
+const WebcamCard = ({ webcam }: WebcamCardProps) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [imageUrl, setImageUrl] = useState(`${webcam.url}?refresh=true`);
@@ -28,12 +26,10 @@ const WebcamCard = ({webcam, onClick, onRefresh}: WebcamCardProps) => {
         return () => clearInterval(interval);
     }, [webcam]);
 
-    const refreshHandler = ()=> {
+    const refreshHandler = () => {
         setLoading(true);
-
         const newUrl = `${webcam.url}?${new Date().getTime()}`;
         setImageUrl(newUrl);
-        onRefresh(newUrl);
     };
 
     return (
@@ -53,7 +49,6 @@ const WebcamCard = ({webcam, onClick, onRefresh}: WebcamCardProps) => {
                         height={600}
                         className="max-w-full h-auto cursor-pointer"
                         loading="lazy"
-                        onClick={onClick}
                         onLoad={handleImageLoad}
                         onError={handleImageError}
                     />

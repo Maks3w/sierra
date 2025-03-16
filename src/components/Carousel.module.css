@@ -1,0 +1,20 @@
+.carousel-image {
+    transition: opacity 2.5s ease-in-out;
+}
+
+.carousel-image-enter {
+    opacity: 0;
+}
+
+.carousel-image-enter-active {
+    opacity: 1;
+}
+
+.carousel-image-exit {
+    opacity: 1;
+}
+
+.carousel-image-exit-active {
+    opacity: 0;
+}
+
