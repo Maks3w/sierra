@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
                 port: '',
                 pathname: '/webcams/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'valdesqui.es',
+                port: '',
+                pathname: '/~cam/**',
+            },
         ],
     },
 };

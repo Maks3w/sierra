@@ -57,6 +57,43 @@ const peaks = [
             },
         ],
     },
+    {
+        name: 'Valdesquí',
+        webcams: [
+            {
+                name: 'Aparcamiento (HD)',
+                providerName: 'Valdesquí',
+                providerImage: 'Aparcamiento',
+                refreshInterval: 5,
+                delayTime: 0,
+                url: 'https://valdesqui.es/~cam/parkingnew.jpg',
+            },
+            {
+                name: 'Pradera (HD)',
+                providerName: 'Valdesquí',
+                providerImage: 'Valdesquí 1800',
+                refreshInterval: 5,
+                delayTime: 0,
+                url: 'https://valdesqui.es/~cam/cota1800new.jpg',
+            },
+            {
+                name: 'Bola del mundo (HD)',
+                providerName: 'Valdesquí',
+                providerImage: 'Bola del mundo',
+                refreshInterval: 5,
+                delayTime: 0,
+                url: 'https://valdesqui.es/~cam/bolanew.jpg',
+            },
+            {
+                name: 'Estadio (HD)',
+                providerName: 'Valdesquí',
+                providerImage: 'Estadio',
+                refreshInterval: 5,
+                delayTime: 0,
+                url: 'https://valdesqui.es/~cam/estadiumnew.jpg',
+            }
+        ],
+    },
 ];
 
 export default peaks;
