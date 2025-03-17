@@ -27,8 +27,7 @@ const CarouselPage = () => {
     return (
         <div>
             <Header />
-            <main className="min-h-screen p-4 bg-gradient-to-b from-gray-800 to-gray-900">
-                <h3>{`Image ${initialIndex + 1}`}</h3>
+            <main>
                 <Carousel
                     images={images}
                     initialIndex={initialIndex}
