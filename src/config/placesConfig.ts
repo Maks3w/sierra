@@ -55,7 +55,16 @@ const places = [
                 delayTime: 10,
                 url: 'https://infocar.dgt.es/etraffic/data/camaras/163996.jpg',
             },
+            {
+                name: 'Pista El Telégrafo',
+                providerName: 'SkiNavacerrada',
+                providerImage: 'El Telégrafo',
+                refreshInterval: 5,
+                delayTime: 10,
+                url: 'https://puertonavacerrada.com/webcam/WEBcamTeleg.jpg',
+            },
         ],
+        infoNieve: 26,
     },
     {
         name: 'Valdesquí',
@@ -93,6 +102,7 @@ const places = [
                 url: 'https://valdesqui.es/~cam/estadiumnew.jpg',
             }
         ],
+        infoNieve: 27,
     },
 ];
 

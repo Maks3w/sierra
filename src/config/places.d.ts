@@ -10,4 +10,5 @@ export interface Webcam {
 export interface Place {
     name: string;
     webcams: Webcam[];
+    infoNieve?: number;
 }
