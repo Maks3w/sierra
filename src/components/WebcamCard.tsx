@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { Webcam } from '@/config/peaks';
+import { Webcam } from '@/config/places';
 
 interface WebcamCardProps {
     webcam: Webcam;

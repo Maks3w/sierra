@@ -7,7 +7,7 @@ export interface Webcam {
     url: string;
 }
 
-export interface Peak {
+export interface Place {
     name: string;
     webcams: Webcam[];
 }

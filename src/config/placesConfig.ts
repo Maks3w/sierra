@@ -1,4 +1,4 @@
-const peaks = [
+const places = [
     {
         name: 'Cotos',
         webcams: [
@@ -96,4 +96,4 @@ const peaks = [
     },
 ];
 
-export default peaks;
+export default places;

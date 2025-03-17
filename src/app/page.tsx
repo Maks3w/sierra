@@ -1,24 +1,24 @@
 "use client";
 
 import {useState} from 'react';
-import PeakSelector from '../components/PeakSelector';
+import PlaceSelector from '../components/PlaceSelector';
 import WebcamCard from '../components/WebcamCard';
-import peaks from '../config/peaksConfig';
-import {Peak} from '@/config/peaks';
+import places from '../config/placesConfig';
+import {Place} from '@/config/places';
 import Link from "next/link";
 
 export default function Home() {
-  const [selectedPeak, setSelectedPeak] = useState<Peak>(peaks[0]);
+  const [selectedPlace, setSelectedPlace] = useState<Place>(places[0]);
 
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mb-6 text-white">Snow Watcher</h1>
-      <PeakSelector peaks={peaks} selectedPeak={selectedPeak} setSelectedPeak={setSelectedPeak}/>
+      <PlaceSelector places={places} selectedPlace={selectedPlace} setSelectedPlace={setSelectedPlace}/>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {selectedPeak.webcams.map((webcam, index) => (
+        {selectedPlace.webcams.map((webcam, index) => (
           <Link
             key={webcam.name}
-            href={`/carousel?peak=${selectedPeak.name}&index=${index}`}>
+            href={`/carousel?place=${selectedPlace.name}&index=${index}`}>
             <WebcamCard webcam={webcam}/>
           </Link>
         ))}

@@ -3,25 +3,25 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Carousel from '@/components/Carousel';
-import peaks from '@/config/peaksConfig';
+import places from '@/config/placesConfig';
 
 const CarouselPage = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const peak = searchParams.get('peak');
+    const place = searchParams.get('place');
     const index = searchParams.get('index');
     const [initialIndex, setInitialIndex] = useState(0);
     const [images, setImages] = useState<string[]>([]);
 
     useEffect(() => {
-        if (peak && index !== undefined) {
-            const selectedPeak = peaks.find(p => p.name === peak);
-            if (selectedPeak) {
+        if (place && index !== undefined) {
+            const selectedPlace = places.find(p => p.name === place);
+            if (selectedPlace) {
                 setInitialIndex(Number(index));
-                setImages(selectedPeak.webcams.map(webcam => webcam.url));
+                setImages(selectedPlace.webcams.map(webcam => webcam.url));
             }
         }
-    }, [peak, index]);
+    }, [place, index]);
 
     const handleClose = () => {
         router.push('/');
