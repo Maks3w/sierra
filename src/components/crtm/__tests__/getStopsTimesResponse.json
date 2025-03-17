@@ -1,0 +1,576 @@
+{
+  "stopTimes": {
+    "actualDate": "2025-03-17T22:11:26+01:00",
+    "stop": {
+      "codStop": "6_70",
+      "shortCodStop": "70",
+      "name": "Cibeles",
+      "park": 0,
+      "nightLinesService": 0
+    },
+    "times": {
+      "Time": [
+        {
+          "line": {
+            "codLine": "6__52___",
+            "shortDescription": "52",
+            "description": "52-SOL\/SEVILLA-SANTAMARCA",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:33:54+01:00",
+            "updateKmlDate": "2022-01-10T19:28:29+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Santamarca",
+          "destinationStop": {
+            "codStop": "6_2508",
+            "shortCodStop": "2508",
+            "name": "Santamarca",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:14:36+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__9___",
+            "shortDescription": "9",
+            "description": "9-SOL\/SEVILLA-HORTALEZA",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:05:27+01:00",
+            "updateKmlDate": "2022-01-10T18:59:35+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Hortaleza",
+          "destinationStop": {
+            "codStop": "6_2043",
+            "shortCodStop": "2043",
+            "name": "Hortaleza",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:17:23+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__146___",
+            "shortDescription": "146",
+            "description": "146-CALLAO-LOS MOLINOS",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Los Molinos",
+          "destinationStop": {
+            "codStop": "6_4510",
+            "shortCodStop": "4510",
+            "name": "Los Molinos",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:17:28+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__1___",
+            "shortDescription": "1",
+            "description": "1-CRISTO REY-PROSPERIDAD",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Prosperidad",
+          "destinationStop": {
+            "codStop": "6_273",
+            "shortCodStop": "273",
+            "name": "Prosperidad",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:18:55+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__2___",
+            "shortDescription": "2",
+            "description": "2-MANUEL BECERRA-REINA VICTORIA",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:01+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "Manuel Becerra",
+          "destinationStop": {
+            "codStop": "6_3811",
+            "shortCodStop": "3811",
+            "name": "Manuel Becerra",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:20:12+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__51___",
+            "shortDescription": "51",
+            "description": "51-SOL\/SEVILLA-PLAZA PERU",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:05:25+01:00",
+            "updateKmlDate": "2022-01-10T18:59:35+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Plaza del Per\u00fa",
+          "destinationStop": {
+            "codStop": "6_113",
+            "shortCodStop": "113",
+            "name": "Plaza del Per\u00fa",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:20:50+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__20___",
+            "shortDescription": "20",
+            "description": "20-SOL\/SEVILLA-PAVONES",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Pavones",
+          "destinationStop": {
+            "codStop": "6_51046",
+            "shortCodStop": "51046",
+            "name": "Pavones",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:20:56+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__9___",
+            "shortDescription": "9",
+            "description": "9-SOL\/SEVILLA-HORTALEZA",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:05:27+01:00",
+            "updateKmlDate": "2022-01-10T18:59:35+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Hortaleza",
+          "destinationStop": {
+            "codStop": "6_2043",
+            "shortCodStop": "2043",
+            "name": "Hortaleza",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:24:10+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__146___",
+            "shortDescription": "146",
+            "description": "146-CALLAO-LOS MOLINOS",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Los Molinos",
+          "destinationStop": {
+            "codStop": "6_4510",
+            "shortCodStop": "4510",
+            "name": "Los Molinos",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:27:28+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__15___",
+            "shortDescription": "15",
+            "description": "15-SOL\/SEVILLA-LA ELIPA",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "La Elipa",
+          "destinationStop": {
+            "codStop": "6_4474",
+            "shortCodStop": "4474",
+            "name": "La Elipa",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:28:47+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__52___",
+            "shortDescription": "52",
+            "description": "52-SOL\/SEVILLA-SANTAMARCA",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:33:54+01:00",
+            "updateKmlDate": "2022-01-10T19:28:29+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Santamarca",
+          "destinationStop": {
+            "codStop": "6_2508",
+            "shortCodStop": "2508",
+            "name": "Santamarca",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:31:09+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__51___",
+            "shortDescription": "51",
+            "description": "51-SOL\/SEVILLA-PLAZA PERU",
+            "codMode": "6",
+            "updateDate": "2022-01-10T19:05:25+01:00",
+            "updateKmlDate": "2022-01-10T18:59:35+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Plaza del Per\u00fa",
+          "destinationStop": {
+            "codStop": "6_113",
+            "shortCodStop": "113",
+            "name": "Plaza del Per\u00fa",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:34:50+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__20___",
+            "shortDescription": "20",
+            "description": "20-SOL\/SEVILLA-PAVONES",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Pavones",
+          "destinationStop": {
+            "codStop": "6_51046",
+            "shortCodStop": "51046",
+            "name": "Pavones",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:34:56+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__2___",
+            "shortDescription": "2",
+            "description": "2-MANUEL BECERRA-REINA VICTORIA",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:01+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "Manuel Becerra",
+          "destinationStop": {
+            "codStop": "6_3811",
+            "shortCodStop": "3811",
+            "name": "Manuel Becerra",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:37:18+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__1___",
+            "shortDescription": "1",
+            "description": "1-CRISTO REY-PROSPERIDAD",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "Prosperidad",
+          "destinationStop": {
+            "codStop": "6_273",
+            "shortCodStop": "273",
+            "name": "Prosperidad",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:42:03+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        },
+        {
+          "line": {
+            "codLine": "6__15___",
+            "shortDescription": "15",
+            "description": "15-SOL\/SEVILLA-LA ELIPA",
+            "codMode": "6",
+            "updateDate": "2020-11-24T21:20:00+01:00",
+            "updateKmlDate": "2020-11-24T20:59:20+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 1,
+          "destination": "La Elipa",
+          "destinationStop": {
+            "codStop": "6_4474",
+            "shortCodStop": "4474",
+            "name": "La Elipa",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-17T22:48:47+01:00",
+          "codVehicle": "",
+          "codIssue": ""
+        }
+      ]
+    },
+    "linesStatus": {
+      "LineStatus": [
+        {
+          "line": {
+            "codLine": "6__1___",
+            "shortDescription": "1"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__146___",
+            "shortDescription": "146"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__15___",
+            "shortDescription": "15"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__2___",
+            "shortDescription": "2"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__20___",
+            "shortDescription": "20"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__51___",
+            "shortDescription": "51"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__52___",
+            "shortDescription": "52"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__74___",
+            "shortDescription": "74"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__801___",
+            "shortDescription": "801"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__802___",
+            "shortDescription": "802"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__803___",
+            "shortDescription": "803"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__804___",
+            "shortDescription": "804"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__805___",
+            "shortDescription": "805"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__806___",
+            "shortDescription": "806"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__807___",
+            "shortDescription": "807"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__828___",
+            "shortDescription": "828"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6__9___",
+            "shortDescription": "9"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6_N_5___",
+            "shortDescription": "N5"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6_N_6___",
+            "shortDescription": "N6"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "6_N_7___",
+            "shortDescription": "N7"
+          },
+          "SAEStatus": true
+        }
+      ]
+    }
+  }
+}

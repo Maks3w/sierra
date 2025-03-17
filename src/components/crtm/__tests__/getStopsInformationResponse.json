@@ -1,0 +1,34 @@
+{
+  "stops": {
+    "StopInformation": {
+      "codStop": "8_20825",
+      "shortCodStop": "20825",
+      "codMode": "8",
+      "name": "AV.1666-PARQUE DE LAS CIG\u00dcE\u00d1AS",
+      "address": "AV.1666-PARQUE DE LAS CIG\u00dcE\u00d1AS",
+      "postCode": "28460",
+      "codMunicipality": "4357",
+      "coordinates": {
+        "longitude": -4.0761293476124,
+        "latitude": 40.714636917343
+      },
+      "lines": {
+        "Line": {
+          "codLine": "8__692___",
+          "shortDescription": "692",
+          "description": "692-LOS MOLINOS - CERCEDILLA - VALDESQU\u00cd",
+          "codMode": "8",
+          "updateDate": "0001-01-01T00:00:00+01:00",
+          "updateKmlDate": "0001-01-01T00:00:00+01:00",
+          "nightService": 0,
+          "active": true,
+          "shortItinerary": {},
+          "companyCode": ""
+        }
+      },
+      "access": -1,
+      "park": 0,
+      "nightLinesService": 0
+    }
+  }
+}

@@ -9,10 +9,14 @@ interface WebcamImageProps {
     className?: string,
 }
 
+const generateFreshUrl = (webcam: Webcam) => {
+    return `${webcam.url}?${new Date().getTime()}`;
+}
+
 const WebcamImage = ({ webcam, className }: WebcamImageProps) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
-    const [imageUrl, setImageUrl] = useState(`${webcam.url}?${new Date().getTime()}`);
+    const [imageUrl, setImageUrl] = useState(generateFreshUrl(webcam));
 
     const handleImageLoad = () => {
         setLoading(false);
@@ -31,8 +35,7 @@ const WebcamImage = ({ webcam, className }: WebcamImageProps) => {
 
     const refreshHandler = () => {
         setLoading(true);
-        const newUrl = `${webcam.url}?${new Date().getTime()}`;
-        setImageUrl(newUrl);
+        setImageUrl(generateFreshUrl(webcam));
     };
 
     return (

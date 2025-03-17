@@ -4,6 +4,8 @@ import places from '@/config/placesConfig';
 import Link from "next/link";
 import AemetWidget from "@/components/AemetWidget";
 import {notFound} from "next/navigation";
+import StopTimes from "@/components/crtm/StopTimes";
+import {Suspense} from "react";
 
 export default async function Home({params}: {
   params: Promise<{ placeName: string }>
@@ -73,10 +75,13 @@ export default async function Home({params}: {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {selectedPlace.publicTransport.map((transport) => (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={transport.id}>
-            <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">Transporte público</h2>
+            <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
+              {transport.type} - {transport.direction} - Stop: {transport.id}
+            </h2>
             <div className="aspect-w-16 aspect-h-9 relative text-center">
-              <iframe src={`https://www.crtm.es/widgets/#/stop/${transport.id}`} width="540"
-                      height="660"></iframe>
+              <Suspense fallback={"Loading ..."}>
+                <StopTimes stopId={transport.id}/>
+              </Suspense>
             </div>
           </div>
         ))}
