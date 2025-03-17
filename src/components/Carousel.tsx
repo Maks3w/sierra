@@ -4,9 +4,10 @@ import {Carousel as ResponsiveCarousel} from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './Carousel.module.css';
 import Image from 'next/image';
-import {redirect, useSearchParams} from "next/navigation";
+import {useSearchParams} from "next/navigation";
 import {useEffect, useState} from "react";
 import places from "@/config/placesConfig";
+import Link from "next/link";
 
 const Carousel = () => {
     const searchParams = useSearchParams();
@@ -25,13 +26,11 @@ const Carousel = () => {
         }
     }, [place, index]);
 
-    const handleClose = () => {
-        redirect('/');
-    };
-
     return (
         <div className={styles.carouselContainer}>
-            <button onClick={handleClose} className={styles.closeButton}>Close</button>
+            <Link href="/">
+                <button className={styles.closeButton}>Close</button>
+            </Link>
             <ResponsiveCarousel selectedItem={initialIndex} showThumbs={false} infiniteLoop useKeyboardArrows>
                 {images.map((image, index) => (
                     <div key={index} className={styles.imageContainer}>
