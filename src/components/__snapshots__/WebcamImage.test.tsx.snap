@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`WebcamImage > handles image error 1`] = `
+<div
+  data-testid="webcam-image"
+>
+  <img
+    alt="Test Webcam"
+    data-nimg="1"
+    decoding="async"
+    height="600"
+    loading="lazy"
+    src="https://example.com/webcam.jpg?1672531200000"
+    style=""
+    width="800"
+  />
+  <p
+    class="text-center text-red-500"
+  >
+    Failed to load image
+  </p>
+</div>
+`;
+
+exports[`WebcamImage > shows loading state initially 1`] = `
+<div
+  data-testid="webcam-image"
+>
+  <div
+    class="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75"
+    data-testid="webcam_image-loader"
+  >
+    <div
+      class="loader"
+    />
+  </div>
+  <img
+    alt="Test Webcam"
+    data-nimg="1"
+    decoding="async"
+    height="600"
+    loading="lazy"
+    src="https://example.com/webcam.jpg?1672531200000"
+    style="color: transparent;"
+    width="800"
+  />
+</div>
+`;

@@ -1,0 +1,25 @@
+.panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.fondo_cms {
+    background-color: black;
+    padding: 6px;
+    display: flex;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.cmsText {
+    font: 11px Arial, Helvetica, sans-serif;
+    color: yellow;
+    width: 150px;
+    text-align: center;
+}
+
+.mensajePMV {
+    padding: 0;
+    margin: 3px 0 0;
+}
