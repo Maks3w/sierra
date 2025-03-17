@@ -13,5 +13,5 @@ tab_width = 4
 indent_size = 2
 tab_width = 2
 
-[{*.json,*.js,*.jsx,*.ts,*.tsx}]
+[{*.json,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.mts}]
 indent_size = 2
