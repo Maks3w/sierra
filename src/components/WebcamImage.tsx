@@ -55,7 +55,7 @@ const WebcamImage = ({ webcam, className }: WebcamImageProps) => {
                     loading="lazy"
                     onLoad={handleImageLoad}
                     onError={handleImageError}
-                    unoptimized
+                    // unoptimized={webcam.providerName != "SkiNavacerrada"}
                 />
                 {error && <p className="text-center text-red-500">{error}</p>}
             </>

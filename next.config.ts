@@ -17,10 +17,28 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'meteosierra.com',
+                port: '',
+                pathname: '/weewx/puerto/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'puertonavacerrada.com',
+                port: '',
+                pathname: '/webcam/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'valdesqui.es',
                 port: '',
                 pathname: '/~cam/**',
             },
+          {
+            protocol: 'https',
+            hostname: 'www.ventamarcelino.com',
+            port: '',
+            pathname: '/meteo/**',
+          },
         ],
     },
     async redirects() {

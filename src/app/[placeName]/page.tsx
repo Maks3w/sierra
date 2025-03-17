@@ -2,6 +2,7 @@ import WebcamCard from '@/components/WebcamCard';
 import InfonieveWidget from '@/components/InfonieveWidget';
 import places from '@/config/placesConfig';
 import Link from "next/link";
+import Image from "next/image";
 import AemetWidget from "@/components/AemetWidget";
 import {notFound} from "next/navigation";
 import StopTimes from "@/components/crtm/StopTimes";
@@ -65,7 +66,7 @@ export default async function Home({params}: {
                 <AemetWidget locationId={weather.value}/>
               )}
               {weather.type !== 'Aemet' && (
-                <img src={weather.value} alt={weather.type}/>
+                <Image src={weather.value} alt={weather.type} width={300} height={200} loading={"lazy"}/>
               )}
             </div>
           </div>

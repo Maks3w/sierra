@@ -97,7 +97,8 @@ const places = [
         providerImage: 'El Telégrafo',
         refreshInterval: 5,
         delayTime: 10,
-        url: 'https://puertonavacerrada.com/webcam/WEBcamTeleg.jpg',
+        // url: 'https://puertonavacerrada.com/webcam/WEBcamTeleg.jpg',
+        url: '/imageProxy',
       },
       {
         name: 'Fuente de los Geólogos',
