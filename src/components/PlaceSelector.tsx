@@ -1,27 +1,26 @@
-import { Place } from "@/types/Places";
+import places from "@/config/placesConfig";
+import Link from "next/link";
 
 interface PlaceSelectorProps {
-    places: Place[];
-    selectedPlace: Place;
-    setSelectedPlace: (place: Place) => void;
+  selectedPlace: string;
 }
 
-const PlaceSelector = ({ places, selectedPlace, setSelectedPlace }: PlaceSelectorProps) => (
+export default function PlaceSelector({selectedPlace}: PlaceSelectorProps) {
+  return (
     <div className="flex justify-center mb-4">
-        {places.map((place) => (
-            <button
-                key={place.name}
-                className={`mx-2 px-4 py-2 rounded-full ${
-                    selectedPlace.name === place.name
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
-                }`}
-                onClick={() => setSelectedPlace(place)}
-            >
-                {place.name}
-            </button>
-        ))}
+      {places.map((place) => (
+        <Link key={place.name} href={`/${place.name}`}>
+          <button
+            className={`mx-2 px-4 py-2 rounded-full ${
+              selectedPlace === place.name
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-700 text-gray-200 hover:bg-gray-600'
+            }`}
+          >
+            {place.name}
+          </button>
+        </Link>
+      ))}
     </div>
-);
-
-export default PlaceSelector;
+  );
+}

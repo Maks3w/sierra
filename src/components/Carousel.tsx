@@ -40,13 +40,13 @@ const Carousel = () => {
 
     return (
         <div className={styles.carouselContainer} ref={ref}>
-            <Link href="/">
+            <Link href={`/${place}`}>
                 <button className={styles.closeButton}>Close</button>
             </Link>
             <ResponsiveCarousel selectedItem={initialIndex} showThumbs={false} infiniteLoop useKeyboardArrows>
                 {webcams.map((webcam, index) => (
-                    <div key={index} className={styles.imageContainer}>
-                        <WebcamImage webcam={webcam} className={styles.image} key={index} />
+                    <div key={`${place}-${index}`} className={styles.imageContainer}>
+                        <WebcamImage webcam={webcam} className={styles.image}/>
                     </div>
                 ))}
             </ResponsiveCarousel>
