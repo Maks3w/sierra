@@ -1,12 +1,15 @@
-import { useRouter } from 'next/router';
+"use client"
+
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import Header from '@/components/Header';
 import Carousel from '@/components/Carousel';
 import peaks from '@/config/peaksConfig';
 
 const CarouselPage = () => {
     const router = useRouter();
-    const { peak, index } = router.query;
+    const searchParams = useSearchParams();
+    const peak = searchParams.get('peak');
+    const index = searchParams.get('index');
     const [initialIndex, setInitialIndex] = useState(0);
     const [images, setImages] = useState<string[]>([]);
 
@@ -26,14 +29,11 @@ const CarouselPage = () => {
 
     return (
         <div>
-            <Header />
-            <main>
-                <Carousel
-                    images={images}
-                    initialIndex={initialIndex}
-                    onClose={handleClose}
-                />
-            </main>
+            <Carousel
+                images={images}
+                initialIndex={initialIndex}
+                onClose={handleClose}
+            />
         </div>
     );
 };

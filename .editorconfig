@@ -13,5 +13,5 @@ tab_width = 4
 indent_size = 2
 tab_width = 2
 
-[{*.graphqlconfig,*.graphqlrc,*.har,*.jsb2,*.jsb3,*.json,*.jsonc,*.postman_collection,*.postman_collection.json,*.postman_environment,*.postman_environment.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,bowerrc,jest.config}]
+[{*.json,*.js,*.jsx,*.ts,*.tsx}]
 indent_size = 2
