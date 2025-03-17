@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import {Webcam} from "@/config/places";
+import {Webcam} from "@/types/Places";
 
 interface WebcamImageProps {
     webcam: Webcam,
@@ -45,7 +45,7 @@ const WebcamImage = ({ webcam, className }: WebcamImageProps) => {
             <>
                 <Image
                     src={imageUrl}
-                    alt={webcam.name}
+                    alt={`${webcam.providerName} - ${webcam.providerImage}`}
                     width={800}
                     height={600}
                     className={className}

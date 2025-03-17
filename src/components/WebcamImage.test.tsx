@@ -1,6 +1,6 @@
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import WebcamImage from './WebcamImage';
-import { Webcam } from '@/config/places';
+import { Webcam } from '@/types/Places';
 
 const mockWebcam: Webcam = {
   name: 'Test Webcam',

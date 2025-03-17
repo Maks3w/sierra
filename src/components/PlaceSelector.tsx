@@ -1,4 +1,4 @@
-import { Place } from "@/config/places";
+import { Place } from "@/types/Places";
 
 interface PlaceSelectorProps {
     places: Place[];

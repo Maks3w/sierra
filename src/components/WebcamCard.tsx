@@ -1,5 +1,5 @@
 import WebcamImage from './WebcamImage';
-import { Webcam } from '@/config/places';
+import { Webcam } from '@/types/Places';
 
 interface WebcamCardProps {
     webcam: Webcam;
@@ -14,7 +14,6 @@ const WebcamCard = ({ webcam }: WebcamCardProps) => {
                     webcam={webcam}
                     className="max-w-full h-auto cursor-pointer"
                 />
-                <p className="text-center mt-2 text-gray-200">{webcam.providerName} - {webcam.providerImage}</p>
                 <p className="text-center text-sm text-gray-400">Refresh: {webcam.refreshInterval} min, Delay: {webcam.delayTime} min</p>
             </div>
         </div>

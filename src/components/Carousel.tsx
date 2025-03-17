@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import places from '@/config/placesConfig';
 import Link from 'next/link';
 import WebcamImage from './WebcamImage';
-import {Webcam} from "@/config/places";
+import {Webcam} from "@/types/Places";
 
 const Carousel = () => {
     const searchParams = useSearchParams();

@@ -1,3 +1,5 @@
+import {PublicTransportDirection, PublicTransportType} from "@/types/Places";
+
 const places = [
   {
     name: 'Cotos',
@@ -11,7 +13,7 @@ const places = [
         url: 'https://infocar.dgt.es/etraffic/data/camaras/161042.jpg',
       },
       {
-        name: 'Parada de autobús (HD)',
+        name: 'Parada de autobús',
         providerName: 'Venta Marcelino',
         providerImage: 'Venta Marcelino Oeste',
         refreshInterval: 5,
@@ -19,7 +21,7 @@ const places = [
         url: 'https://meteocercedilla.com/webcams/webcamoeste.jpg',
       },
       {
-        name: 'Helipuerto (HD)',
+        name: 'Helipuerto',
         providerName: 'Venta Marcelino',
         providerImage: 'Venta Marcelino Sur',
         refreshInterval: 5,
@@ -27,7 +29,7 @@ const places = [
         url: 'https://meteocercedilla.com/webcams/webcamsur.jpg',
       },
       {
-        name: 'Aparcamiento (HD)',
+        name: 'Aparcamiento',
         providerName: 'Venta Marcelino',
         providerImage: 'Venta Marcelino Sureste',
         refreshInterval: 5,
@@ -35,12 +37,46 @@ const places = [
         url: 'https://meteocercedilla.com/webcams/webcamsureste.jpg',
       },
       {
-        name: 'Norte (HD)',
+        name: 'Refugio',
         providerName: 'Venta Marcelino',
         providerImage: 'Venta Marcelino Norte',
         refreshInterval: 5,
         delayTime: 0,
         url: 'https://meteocercedilla.com/webcams/webcamnorte.jpg',
+      },
+    ],
+    socialNetwork: {
+      twitter: 'VentaMarcelino',
+    },
+    publicTransport: [
+      {
+        id: "8_09196",
+        type: PublicTransportType.BUS,
+        direction: PublicTransportDirection.UP,
+      },
+      {
+        id: "8_09198",
+        type: PublicTransportType.BUS,
+        direction: PublicTransportDirection.DOWN,
+      },
+      {
+        id: "5_23",
+        type: PublicTransportType.TRAIN,
+        direction: PublicTransportDirection.BOTH,
+      }
+    ],
+    weather: [
+      {
+        type: 'Temperatura',
+        value: 'https://www.ventamarcelino.com/meteo/tempdaycomp.png',
+      },
+      {
+        type: 'Velocidad del viento',
+        value: 'https://www.ventamarcelino.com/meteo/wspeeddaycomp.png',
+      },
+      {
+        type: 'Precipitaciones',
+        value: 'https://www.ventamarcelino.com/meteo/rainday.png',
       },
     ],
   },
@@ -68,12 +104,39 @@ const places = [
       twitter: 'SkiNavacerrada',
     },
     infoNieve: 26,
+    publicTransport: [
+      {
+        id: "8_09195",
+        type: PublicTransportType.BUS,
+        direction: PublicTransportDirection.UP,
+      },
+      {
+        id: "8_09199",
+        type: PublicTransportType.BUS,
+        direction: PublicTransportDirection.DOWN,
+      },
+      {
+        id: "5_63",
+        type: PublicTransportType.TRAIN,
+        direction: PublicTransportDirection.BOTH,
+      }
+    ],
+    weather: [
+      {
+        type: 'Hotel Corzo',
+        value: 'https://meteosierra.com/weewx/puerto/banner.png',
+      },
+      {
+        type: 'Aemet',
+        value: 'madrid-id28079',
+      },
+    ],
   },
   {
     name: 'Valdesquí',
     webcams: [
       {
-        name: 'Aparcamiento (HD)',
+        name: 'Aparcamiento',
         providerName: 'Valdesquí',
         providerImage: 'Aparcamiento',
         refreshInterval: 5,
@@ -81,7 +144,7 @@ const places = [
         url: 'https://valdesqui.es/~cam/parkingnew.jpg',
       },
       {
-        name: 'Pradera (HD)',
+        name: 'Pradera',
         providerName: 'Valdesquí',
         providerImage: 'Valdesquí 1800',
         refreshInterval: 5,
@@ -89,7 +152,7 @@ const places = [
         url: 'https://valdesqui.es/~cam/cota1800new.jpg',
       },
       {
-        name: 'Bola del mundo (HD)',
+        name: 'Bola del mundo',
         providerName: 'Valdesquí',
         providerImage: 'Bola del mundo',
         refreshInterval: 5,
@@ -97,7 +160,7 @@ const places = [
         url: 'https://valdesqui.es/~cam/bolanew.jpg',
       },
       {
-        name: 'Estadio (HD)',
+        name: 'Estadio',
         providerName: 'Valdesquí',
         providerImage: 'Estadio',
         refreshInterval: 5,
@@ -109,7 +172,21 @@ const places = [
       twitter: 'ValdesquiCotos',
     },
     infoNieve: 27,
+    publicTransport: [
+      {
+        id: "8_09197",
+        type: PublicTransportType.BUS,
+        direction: PublicTransportDirection.BOTH,
+      }
+    ],
+    weather: [],
   },
 ];
 
-export default places;
+const sortedPlaces = [
+  places[1],
+  places[0],
+  places[2],
+]
+
+export default sortedPlaces;
