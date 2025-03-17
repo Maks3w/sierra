@@ -7,17 +7,28 @@ import WebcamImage from "@/components/WebcamImage";
 export default async function PmvPage() {
     const gridClassNames = "grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4";
     const params = {
-        latNS: 40.9,
-        longNS: -3.8,
+        latNS: 40.9, // Segovia CL-601
+        longNS: -3.7, // Segovia CL-601
         latSW: 40.7,
         longSW: -4.1,
-        zoom: 13,
+        zoom: 18,
     };
-    const elementos = await fetchBuscarElementos(params);
+    const carreteras = [
+        "CL-601",
+        "M-601",
+        "SG-615",
+        "M-604",
+        "M-614",
+        "A-6",
+        "M-607",
+    ]
+    const allElements = await fetchBuscarElementos(params);
+    const items = allElements.filter((element) => carreteras.includes(element.carretera));
+
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <div className={gridClassNames}>
-                {elementos.map((item)=> (
+                {items.map((item)=> (
                     <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={item.codEle}>
                         <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
                             { item.tipo } - {item.alias}

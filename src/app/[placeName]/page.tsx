@@ -1,4 +1,3 @@
-import PlaceSelector from '@/components/PlaceSelector';
 import WebcamCard from '@/components/WebcamCard';
 import InfonieveWidget from '@/components/InfonieveWidget';
 import places from '@/config/placesConfig';
@@ -21,7 +20,6 @@ export default async function Home({params}: {
 
   return (
     <div>
-      <PlaceSelector selectedPlace={placeName}/>
       <div className={gridClassNames}>
         {selectedPlace.webcams.map((webcam, index) => (
           <Link
