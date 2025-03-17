@@ -28,6 +28,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "jsdom": "^26.0.0",
+    "screenfull": "^6.0.2",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^5.1.4",

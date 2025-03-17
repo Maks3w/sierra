@@ -4,11 +4,13 @@ import { Carousel as ResponsiveCarousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './Carousel.module.css';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import places from '@/config/placesConfig';
 import Link from 'next/link';
 import WebcamImage from './WebcamImage';
 import {Webcam} from "@/types/Places";
+import screenfull from 'screenfull';
+
 
 const Carousel = () => {
     const searchParams = useSearchParams();
@@ -16,6 +18,8 @@ const Carousel = () => {
     const index = searchParams.get('index');
     const [initialIndex, setInitialIndex] = useState(0);
     const [webcams, setWebcams] = useState<Webcam[]>([]);
+
+    const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (place && index !== undefined) {
@@ -27,8 +31,15 @@ const Carousel = () => {
         }
     }, [place, index]);
 
+    useEffect(() => {
+        if (screenfull.isEnabled) {
+            // @ts-expect-error type assertion
+            screenfull.request(ref.current);
+        }
+    }, []);
+
     return (
-        <div className={styles.carouselContainer}>
+        <div className={styles.carouselContainer} ref={ref}>
             <Link href="/">
                 <button className={styles.closeButton}>Close</button>
             </Link>
