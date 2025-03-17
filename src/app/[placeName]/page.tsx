@@ -72,7 +72,7 @@ export default async function Home({params}: {
         ))}
       </div>
       <hr className="my-6"/>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className={gridClassNames}>
         {selectedPlace.publicTransport.map((transport) => (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={transport.id}>
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
