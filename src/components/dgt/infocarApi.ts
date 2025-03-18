@@ -17,6 +17,6 @@ export const buildBuscarElementosUrl = (params: BuscarElementosParams): string =
 
 export const fetchBuscarElementos = async (params: BuscarElementosParams): Promise<Elemento[]> => {
   const url = buildBuscarElementosUrl(params);
-  const response = await fetch(url);
+  const response = await fetch(url, {next: {revalidate: 60}});
   return response.json();
 }

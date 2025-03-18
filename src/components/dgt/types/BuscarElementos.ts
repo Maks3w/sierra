@@ -3,7 +3,7 @@ export interface BuscarElementosParams {
   longNS: number;
   latSW: number;
   longSW: number;
-  zoom: number;
+  zoom?: number;
   accion?: string;
   Camaras?: boolean;
   SensoresTrafico?: boolean;
@@ -56,6 +56,7 @@ export enum ElementoTipo {
 }
 
 export const paramsDefaults = {
+  zoom: 18,
   accion: 'getElementos',
   Camaras: true,
   SensoresTrafico: true,

@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: 'https',
+                hostname: 'infocar.dgt.es',
+                port: '',
+                pathname: '/etraffic/img/**',
+            },
+            {
+                protocol: 'https',
                 hostname: 'meteocercedilla.com',
                 port: '',
                 pathname: '/webcams/**',

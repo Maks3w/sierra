@@ -1,4 +1,5 @@
 import styles from './DgtPmv.module.css';
+import Image from "next/image";
 
 class Panel {
   leftImage = "apagado.gif";
@@ -47,9 +48,9 @@ function renderSubPanel(subPanelId: number, panel: Panel) {
   const pathIcoPanel = 'https://infocar.dgt.es/etraffic/img/ICONOenPANELES/';
   return (
     <div className={styles.fondo_cms} id={`panel_${subPanelId}`}>
-      <img src={`${pathIcoPanel}${panel.leftImage}`} width="42px" height="42px" alt="señal izquierda"/>
+      <Image src={`${pathIcoPanel}${panel.leftImage}`} width={42} height={42} alt="señal izquierda"/>
       <div className={styles.cmsText} dangerouslySetInnerHTML={{ __html: panel.message }}></div>
-      <img src={`${pathIcoPanel}${panel.rightImage}`} width="42px" height="42px" alt="señal derecha"/>
+      <Image src={`${pathIcoPanel}${panel.rightImage}`} width={42} height={42} alt="señal derecha"/>
     </div>
 );
 }

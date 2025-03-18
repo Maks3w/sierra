@@ -3,6 +3,7 @@ import DgtPmv from '@/components/dgt/DgtPmv';
 import {fetchBuscarElementos} from "@/components/dgt/infocarApi";
 import {ElementoTipo} from "@/components/dgt/types/BuscarElementos";
 import WebcamImage from "@/components/WebcamImage";
+import Image from "next/image";
 
 export default async function PmvPage() {
     const gridClassNames = "grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4";
@@ -11,7 +12,6 @@ export default async function PmvPage() {
         longNS: -3.7, // Segovia CL-601
         latSW: 40.7,
         longSW: -4.1,
-        zoom: 18,
     };
     const carreteras = [
         "CL-601",
@@ -32,7 +32,13 @@ export default async function PmvPage() {
                     <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={item.codEle}>
                         <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
                             { item.tipo } - {item.alias}
-                            { item.tipo === ElementoTipo.Incidencia && <img src={`https://infocar.dgt.es/etraffic/img/iconosIncitar/${item.icono}`} style={{"display": "inline-block"}} /> }
+                            { item.tipo === ElementoTipo.Incidencia && item.icono &&
+                              <Image
+                                src={`https://infocar.dgt.es/etraffic/img/iconosIncitar/${item.icono}`}
+                                alt={item?.suceso || ""}
+                                style={{"display": "inline-block"}}
+                              />
+                            }
                         </h2>
                         <div className="aspect-w-16 aspect-h-9 relative text-center">
                             { item.tipo === ElementoTipo.Panel_CMS && <DgtPmv panelId={item.codEle}/> }
