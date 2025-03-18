@@ -1,0 +1,35 @@
+{
+  "incidentsAffectations": {
+    "IncidentAffectation": {
+      "codMode": "5",
+      "codLine": "5__C9___",
+      "type": "AFF",
+      "description": "Desde el 6 de mayo hasta fin de obras, se realizar\u00e1n las obras de renovaci\u00f3n integral de la l\u00ednea C-9, el servicio quedar\u00e1 interrumpido durante la duraci\u00f3n de las obras Cercedilla-Puerto de Navacerrada -Los Cotos. Se realiza servicio sustitutivo por carretera.",
+      "stopsAffectated": {
+        "ShortStop": [
+          {
+            "codStop": "5_16",
+            "shortCodStop": "16",
+            "name": "CERCEDILLA",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          {
+            "codStop": "5_63",
+            "shortCodStop": "63",
+            "name": "PUERTO NAVACERRADA",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          {
+            "codStop": "5_23",
+            "shortCodStop": "23",
+            "name": "COTOS",
+            "park": 0,
+            "nightLinesService": 0
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "stopTimes": {
+    "actualDate": "2025-03-18T08:04:12+01:00",
+    "stop": {
+      "codStop": "5_63",
+      "shortCodStop": "63",
+      "name": "PUERTO NAVACERRADA",
+      "park": 0,
+      "nightLinesService": 0
+    },
+    "times": {},
+    "linesStatus": {
+      "LineStatus": {
+        "line": {
+          "codLine": "5__C9___",
+          "shortDescription": "C9"
+        },
+        "SAEStatus": true
+      }
+    }
+  }
+}

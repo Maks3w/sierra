@@ -1,0 +1,46 @@
+{
+  "lines": {
+    "Line": {
+      "codLine": "8__692___",
+      "shortDescription": "692",
+      "description": "692-LOS MOLINOS - CERCEDILLA - VALDESQU\u00cd",
+      "codMode": "8",
+      "updateDate": "0001-01-01T00:00:00+01:00",
+      "updateKmlDate": "0001-01-01T00:00:00+01:00",
+      "nightService": 0,
+      "active": true,
+      "shortItinerary": {
+        "Itinerary": [
+          {
+            "codItinerary": "8__692____1_-_IT_1",
+            "name": "sdf SE VALDESQU\u00cd",
+            "direction": 1,
+            "stops": {}
+          },
+          {
+            "codItinerary": "8__692____1_ec_IT_2",
+            "name": "sdf SE COTOS",
+            "direction": 1,
+            "stops": {}
+          },
+          {
+            "codItinerary": "8__692____2_-_IT_1",
+            "name": "sdf SE CERCEDILLA-LOS MOLINOS",
+            "direction": 2,
+            "stops": {}
+          },
+          {
+            "codItinerary": "8__692____2_ec_IT_2",
+            "name": "sdf SE CERCEDILLA-LOS MOLINOS",
+            "direction": 2,
+            "stops": {}
+          }
+        ]
+      },
+      "URLLine": "https:\/\/www.crtm.es\/8__692___.aspx",
+      "colorLine": "#8EBF42",
+      "text_colorLine": "#FFFFFF",
+      "companyCode": "180"
+    }
+  }
+}
