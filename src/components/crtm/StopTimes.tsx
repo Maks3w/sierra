@@ -13,8 +13,8 @@ export default async function StopTimes({stopId}: StopTimesProps) {
 
     return (
       <div>
-        {times.map((time) => (
-          <div key={time.codVehicle}>
+        {times.map((time, index) => (
+          <div key={`${stopId}-${index}`}>
             <div>{time.time} - {time.line.shortDescription} - {time.destination}</div>
           </div>
         ))}
