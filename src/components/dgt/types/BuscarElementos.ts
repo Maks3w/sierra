@@ -123,8 +123,32 @@ export interface SensorMeteorologico {
   salinidad: string;
   presion_A: string;
   indiceMapa: string;
-  noDatos: string;
+  noDatos?: string;
 }
+
+export const sensorMeteorologicoLabels: { [key: string]: string } = {
+  fecha: "Fecha",
+  t_congel: "Temperatura de Congelación",
+  vel_viento: "Velocidad del Viento",
+  dir_viento: "Dirección del Viento",
+  est_super: "Estado de la Superficie",
+  t_subsuelo: "Temperatura del Subsuelo",
+  tip_viento: "Tipo de Viento",
+  alt_agua: "Altura del Agua",
+  t_super: "Temperatura de la Superficie",
+  tiempo_Presente: "Tiempo Presente",
+  visibilidad: "Visibilidad",
+  radiacion_global: "Radiación Global",
+  tipo_viento: "Tipo de Viento",
+  temp_rocio: "Temperatura del Rocío",
+  c_Precipitaciones: "Precipitaciones",
+  i_Precipitaciones: "Intensidad de Precipitaciones",
+  temperatura: "Temperatura",
+  humedad: "Humedad",
+  n_Precipitacion: "Nivel de Precipitación",
+  salinidad: "Salinidad",
+  presion_A: "Presión Atmosférica",
+};
 
 export interface SensorTrafico {
   fecha: string;

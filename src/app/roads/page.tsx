@@ -4,6 +4,7 @@ import {getElementos} from "@/components/dgt/infocarApi";
 import {ElementoTipo} from "@/components/dgt/types/BuscarElementos";
 import WebcamImage from "@/components/WebcamImage";
 import Image from "next/image";
+import {SensorMeteorologicoComponent} from "@/components/dgt/SensorMeteorologicoComponent";
 
 export default async function PmvPage() {
     const gridClassNames = "grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4";
@@ -41,6 +42,7 @@ export default async function PmvPage() {
                             }
                         </h2>
                         <div className="aspect-w-16 aspect-h-9 relative text-center">
+                            { item.tipo === ElementoTipo.SensorMeteorologico && <SensorMeteorologicoComponent codEle={item.codEle}/> }
                             { item.tipo === ElementoTipo.Panel_CMS && <DgtPmv panelId={item.codEle}/> }
                             { item.tipo === ElementoTipo.Camara && <WebcamImage webcam={{
                                 name: item.alias,
