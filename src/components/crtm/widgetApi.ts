@@ -29,14 +29,6 @@ export const getStopsInformation = async (stopId: string): Promise<Stop> => {
 export const getStopsTimes = async (stopId: string): Promise<StopTimes> => {
   const response = await crtmFetch(`https://www.crtm.es/widgets/api/GetStopsTimes.php?codStop=${stopId}&type=1&orderBy=2&stopTimesByIti=3`);
   const payload: GetStopsTimesResponse = await response.json();
-  // parse the time
-  const {Time} = payload.stopTimes.times;
-  if (Time) {
-    Time.forEach((time) => {
-      const date = new Date(time.time);
-      time.time = date.toLocaleTimeString();
-    });
-  }
   // If stopTimes.linesStatus.LineStatus is not an array, make it an array
   if (!Array.isArray(payload.stopTimes.linesStatus.LineStatus)) {
     payload.stopTimes.linesStatus.LineStatus = [payload.stopTimes.linesStatus.LineStatus];

@@ -15,7 +15,7 @@ export default async function StopTimes({stopId}: StopTimesProps) {
       <div>
         {times.map((time, index) => (
           <div key={`${stopId}-${index}`}>
-            <div>{time.time} - {time.line.shortDescription} - {time.destination}</div>
+            <div>{new Date(time.time).toLocaleTimeString()} - {time.line.shortDescription} - {time.destination}</div>
           </div>
         ))}
         {times.length === 0 && (
