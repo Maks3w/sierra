@@ -1,0 +1,10 @@
+{
+  "fecha": "2025-03-19 08:17:00.0",
+  "tipo": "SensorTrafico",
+  "textoAdvertenciaPrecision": "La ubicación en el mapa es aproximada",
+  "intensidad": "240",
+  "ocupacion": "1",
+  "composicion": "100",
+  "velocidad": "99",
+  "indiceMapa": "0"
+}

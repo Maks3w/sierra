@@ -46,6 +46,10 @@ export interface Elemento {
   poblacion?: string;
   suceso?: string;
   nivel?: string;
+  encodedPoints?: string;
+  encodedLevels?: string;
+  textoAdvertenciaPrecision?: string;
+  indiceMapa?: string;
 }
 
 export enum ElementoTipo {
@@ -53,6 +57,9 @@ export enum ElementoTipo {
   Panel_CMS = 'Panel_CMS',
   Camara = 'Camara',
   Incidencia = 'Incidencia',
+  NivelServicio = 'nivelServicio',
+  Radar = 'Radar',
+  SensorTrafico = 'SensorTrafico'
 }
 
 export const paramsDefaults = {
@@ -72,4 +79,87 @@ export const paramsDefaults = {
   IncidenciasRESTRICCIONES: true,
   niveles: true,
   caracter: 'acontecimiento'
+}
+
+export interface Panel_CMS {
+  mensaje2: string;
+  mensaje1: string;
+  imgTxtIzq1: string;
+  imgTxtIzq2: string;
+  textoAdvertenciaPrecision: string;
+  indiceMapa: string;
+  drawDer2: string;
+  drawIz2: string;
+  tipo: string;
+  drawDer1: string;
+  drawIz1: string;
+  imgTxtDer2: string;
+  imgTxtDer1: string;
+  NumAlternancias: string;
+}
+
+export interface SensorMeteorologico {
+  t_congel: string;
+  tipo: string;
+  vel_viento: string;
+  dir_viento: string;
+  est_super: string;
+  t_subsuelo: string;
+  textoAdvertenciaPrecision: string;
+  tip_viento: string;
+  alt_agua: string;
+  t_super: string;
+  tiempo_Presente: string;
+  visibilidad: string;
+  radiacion_global: string;
+  fecha: string;
+  tipo_viento: string;
+  temp_rocio: string;
+  c_Precipitaciones: string;
+  i_Precipitaciones: string;
+  temperatura: string;
+  humedad: string;
+  n_Precipitacion: string;
+  salinidad: string;
+  presion_A: string;
+  indiceMapa: string;
+  noDatos: string;
+}
+
+export interface SensorTrafico {
+  fecha: string;
+  tipo: string;
+  textoAdvertenciaPrecision: string;
+  intensidad: string;
+  ocupacion: string;
+  composicion: string;
+  velocidad: string;
+  indiceMapa: string;
+  noDatos: string;
+}
+
+export interface Incidencia {
+  icono: string;
+  descripcion: string;
+  tipo: string;
+  estado: number;
+  autonomia: string;
+  lng: number;
+  causa: string;
+  hora: string;
+  precision: string;
+  pkFinal: number;
+  provincia: string;
+  fechaFin: string;
+  horaFin: string;
+  fecha: string;
+  pkIni: number;
+  sentido: string;
+  alias: string;
+  carretera: string;
+  poblacion: string;
+  suceso: string;
+  codEle: string;
+  nivel: string;
+  lat: number;
 }

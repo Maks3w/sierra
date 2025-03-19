@@ -1,5 +1,7 @@
 import styles from './DgtPmv.module.css';
 import Image from "next/image";
+import {getDetalles} from "@/components/dgt/infocarApi";
+import {Panel_CMS} from "@/components/dgt/types/BuscarElementos";
 
 class Panel {
   leftImage = "apagado.gif";
@@ -13,35 +15,13 @@ class Panel {
   }
 }
 
-interface PanelData {
-  mensaje2: string;
-  mensaje1: string;
-  imgTxtIzq1: string;
-  imgTxtIzq2: string;
-  textoAdvertenciaPrecision: string;
-  indiceMapa: string;
-  drawDer2: string;
-  drawIz2: string;
-  tipo: string;
-  drawDer1: string;
-  drawIz1: string;
-  imgTxtDer2: string;
-  imgTxtDer1: string;
-  NumAlternancias: string;
-}
-
-async function retrievePanelData(panelId: string): Promise<PanelData> {
-  const response = await fetch(`https://infocar.dgt.es/etraffic/BuscarElementos?accion=getDetalles&codEle=${panelId}&tipo=Panel_CMS&indiceMapa=0`);
-  return await response.json();
-}
-
 async function connectedCallback(panelId: string) {
-  const request = await retrievePanelData(panelId);
+  const response = await getDetalles(panelId, "Panel_CMS") as Panel_CMS;
 
-  const panel1 = new Panel(request.drawIz1, request.drawDer1, request.mensaje1);
-  const panel2 = new Panel(request.drawIz2, request.drawDer2, request.mensaje2);
+  const panel1 = new Panel(response.drawIz1, response.drawDer1, response.mensaje1);
+  const panel2 = new Panel(response.drawIz2, response.drawDer2, response.mensaje2);
 
-  return {numAlternancias: request.NumAlternancias, panel1, panel2};
+  return {numAlternancias: response.NumAlternancias, panel1, panel2};
 }
 
 function renderSubPanel(subPanelId: number, panel: Panel) {

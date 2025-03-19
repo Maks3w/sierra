@@ -1,6 +1,6 @@
 import {Suspense} from "react";
 import DgtPmv from '@/components/dgt/DgtPmv';
-import {fetchBuscarElementos} from "@/components/dgt/infocarApi";
+import {getElementos} from "@/components/dgt/infocarApi";
 import {ElementoTipo} from "@/components/dgt/types/BuscarElementos";
 import WebcamImage from "@/components/WebcamImage";
 import Image from "next/image";
@@ -22,7 +22,7 @@ export default async function PmvPage() {
         "A-6",
         "M-607",
     ]
-    const allElements = await fetchBuscarElementos(params);
+    const allElements = await getElementos(params);
     const items = allElements.filter((element) => carreteras.includes(element.carretera));
 
     return (
