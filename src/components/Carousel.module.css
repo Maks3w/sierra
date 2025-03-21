@@ -1,29 +1,44 @@
-.imageContainer {
+.carouselContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ensure the image container takes the full height */
+    object-fit: contain;
 }
 
 .image {
-    max-width: 100%;
-    max-height: 100%; /* Ensure the image fits within the container */
-    object-fit: cover;
+    object-fit: contain;
     pointer-events: auto !important;
 }
 
 @media (orientation: landscape) {
+    .carouselContainer {
+        height: 100vh; /* Ensure the container takes the full height */
+        width: 100vw; /* Ensure the container takes the full width */
+    }
+
+    .imageContainer {
+        width: 100vw;
+        height: 100vh;
+    }
+
     .image {
-        width: auto !important;
-        height: auto;
-        max-width: 100vw; /* Ensure the image takes the full width in landscape mode */
-        max-height: 100vh; /* Ensure the image takes the full height in landscape mode */
+        width: 100vw !important;
+        height: 100vh !important;
     }
 }
 
-@media (max-width: 768px) {
+@media (orientation: portrait) and (max-width: 768px) {
+    .carouselContainer {
+        transform: rotate(90deg);
+        height: 100vw; /* Ensure the container takes the full height */
+        width: 100vh; /* Ensure the container takes the full width */
+    }
+
+    .imageContainer {
+        width: 100vh;
+        height: 100vw;
+    }
+
     .image {
-        width: 100%;
-        height: auto;
+        width: 100vh !important;
+        height: 100vw !important;
     }
 }
