@@ -29,10 +29,10 @@ function renderSubPanel(subPanelId: number, panel: Panel) {
   return (
     <div className={styles.fondo_cms} id={`panel_${subPanelId}`}>
       <Image src={`${pathIcoPanel}${panel.leftImage}`} width={42} height={42} alt="señal izquierda"/>
-      <div className={styles.cmsText} dangerouslySetInnerHTML={{ __html: panel.message }}></div>
+      <div className={styles.cmsText} dangerouslySetInnerHTML={{__html: panel.message}}></div>
       <Image src={`${pathIcoPanel}${panel.rightImage}`} width={42} height={42} alt="señal derecha"/>
     </div>
-);
+  );
 }
 
 interface DgtPmvProps {

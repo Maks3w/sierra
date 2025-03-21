@@ -7,6 +7,7 @@ import AemetWidget from "@/components/AemetWidget";
 import {notFound} from "next/navigation";
 import StopTimes from "@/components/crtm/StopTimes";
 import {Suspense} from "react";
+import Section from "@/components/Section";
 
 export default async function Home({params}: {
   params: Promise<{ placeName: string }>
@@ -19,11 +20,9 @@ export default async function Home({params}: {
     notFound()
   }
 
-  const gridClassNames = "grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4";
-
   return (
     <div>
-      <div className={gridClassNames}>
+      <Section>
         {selectedPlace.webcams.map((webcam, index) => (
           <Link
             key={webcam.name}
@@ -31,9 +30,9 @@ export default async function Home({params}: {
             <WebcamCard webcam={webcam}/>
           </Link>
         ))}
-      </div>
+      </Section>
       <hr className="my-6"/>
-      <div className={gridClassNames}>
+      <Section>
         {selectedPlace.infoNieve && (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">Estación de esquí</h2>
@@ -55,9 +54,9 @@ export default async function Home({params}: {
             </div>
           </div>
         )}
-      </div>
+      </Section>
       <hr className="my-6"/>
-      <div className={gridClassNames}>
+      <Section>
         {selectedPlace.weather.map((weather) => (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={weather.type}>
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">{weather.type}</h2>
@@ -71,9 +70,9 @@ export default async function Home({params}: {
             </div>
           </div>
         ))}
-      </div>
+      </Section>
       <hr className="my-6"/>
-      <div className={gridClassNames}>
+      <Section>
         {selectedPlace.publicTransport.map((transport) => (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden" key={transport.id}>
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
@@ -86,7 +85,7 @@ export default async function Home({params}: {
             </div>
           </div>
         ))}
-      </div>
+      </Section>
     </div>
   );
 }
