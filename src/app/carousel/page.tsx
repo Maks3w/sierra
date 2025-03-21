@@ -5,7 +5,7 @@ import {Suspense} from "react";
 import {useSearchParams} from "next/navigation";
 import places from '@/config/placesConfig';
 
-const CarouselPage = () => {
+function CarouselParams() {
   const searchParams = useSearchParams();
   const place = searchParams.get('place');
   const index = searchParams.get('index');
@@ -20,17 +20,17 @@ const CarouselPage = () => {
     window.location.href = `/${place}`;
   }
 
+  return <Carousel
+    webcams={webcams}
+    initialIndex={initialIndex}
+    onClose={onClose}
+  />;
+}
+
+export default function CarouselPage() {
   return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Carousel
-          webcams={webcams}
-          initialIndex={initialIndex}
-          onClose={onClose}
-        />
-      </Suspense>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <CarouselParams/>
+    </Suspense>
   );
 };
-
-export default CarouselPage;
