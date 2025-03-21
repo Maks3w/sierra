@@ -58,7 +58,7 @@ const WebcamImage = ({webcam, className}: WebcamImageProps) => {
           onError={handleImageError}
           unoptimized
         />
-        {error && <p className="text-center text-red-500">{error}</p>}
+        {/*{error && <p className="text-center text-red-500">{error}</p>}*/}
       </>
     </div>
   );
