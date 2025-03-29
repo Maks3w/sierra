@@ -119,6 +119,14 @@ const places = [
       {
         name: 'La Fonda Real',
         providerName: 'DGT',
+        providerImage: 'M-601 PK 12.7 C',
+        refreshInterval: 5,
+        delayTime: 10,
+        url: 'https://infocar.dgt.es/etraffic/data/camaras/168411.jpg',
+      },
+      {
+        name: 'Cruce M-601, M-607, M-614',
+        providerName: 'DGT',
         providerImage: 'M-601 PK 12.5 C',
         refreshInterval: 5,
         delayTime: 10,
