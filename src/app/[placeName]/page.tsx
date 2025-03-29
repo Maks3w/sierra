@@ -78,7 +78,7 @@ export default async function Home({params}: {
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">
               {transport.type} - {transport.direction} - Stop: {transport.id}
             </h2>
-            <div className="aspect-w-16 aspect-h-9 relative text-center">
+            <div className="aspect-w-16 aspect-h-9 relative text-left">
               <Suspense fallback={"Loading ..."}>
                 <StopTimes stopId={transport.id}/>
               </Suspense>
