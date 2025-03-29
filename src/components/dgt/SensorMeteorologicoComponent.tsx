@@ -1,5 +1,5 @@
-import {getDetalles} from '@/components/dgt/infocarApi';
-import {SensorMeteorologico, sensorMeteorologicoLabels} from "@/components/dgt/types/BuscarElementos";
+import {getDetalles} from '@/lib/dgt/infocarApi';
+import {SensorMeteorologico, sensorMeteorologicoLabels} from "@/lib/dgt/types/BuscarElementos";
 
 interface SensorMeteorologicoProps {
   codEle: string;

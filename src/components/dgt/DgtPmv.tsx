@@ -1,7 +1,7 @@
 import styles from './DgtPmv.module.css';
 import Image from "next/image";
-import {getDetalles} from "@/components/dgt/infocarApi";
-import {Panel_CMS} from "@/components/dgt/types/BuscarElementos";
+import {getDetalles} from "@/lib/dgt/infocarApi";
+import {Panel_CMS} from "@/lib/dgt/types/BuscarElementos";
 
 class Panel {
   leftImage = "apagado.gif";

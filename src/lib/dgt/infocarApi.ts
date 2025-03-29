@@ -1,7 +1,7 @@
 import {
   BuscarElementosParams,
   paramsDefaults, Elemento
-} from "@/components/dgt/types/BuscarElementos";
+} from "@/lib/dgt/types/BuscarElementos";
 
 const TIMEOUT = 9000;
 const CACHE_TTL = 60;

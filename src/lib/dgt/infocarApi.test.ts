@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import {buildBuscarElementosUrl} from "@/components/dgt/infocarApi";
+import {buildBuscarElementosUrl} from "@/lib/dgt/infocarApi";
 
 describe('BuscarElementos API', () => {
   it('should build the correct URL with all parameters', () => {

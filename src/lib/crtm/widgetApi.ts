@@ -1,4 +1,4 @@
-import {GetStopsInformationResponse, GetStopsTimesResponse, Stop, StopTimes} from "@/components/crtm/types/Stop";
+import {GetStopsInformationResponse, GetStopsTimesResponse, Stop, StopTimes} from "@/lib/crtm/types/Stop";
 
 const TIMEOUT = 9000;
 

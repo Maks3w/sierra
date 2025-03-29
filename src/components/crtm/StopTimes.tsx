@@ -1,4 +1,4 @@
-import {getStopsTimes} from "@/components/crtm/widgetApi";
+import {getStopsTimes} from "@/lib/crtm/widgetApi";
 
 interface StopTimesProps {
   stopId: string

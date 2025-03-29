@@ -1,0 +1,190 @@
+{
+  "stopTimes": {
+    "actualDate": "2025-03-29T16:52:31+01:00",
+    "stop": {
+      "codStop": "8_09199",
+      "shortCodStop": "09199",
+      "name": "CTRA.M601-PUERTO DE NAVACERRADA",
+      "park": 0,
+      "nightLinesService": 0
+    },
+    "times": {
+      "Time": [
+        {
+          "line": {
+            "codLine": "8__692___",
+            "shortDescription": "692",
+            "description": "692-LOS MOLINOS - CERCEDILLA - VALDESQU\u00cd",
+            "codMode": "8",
+            "updateDate": "0001-01-01T00:00:00+01:00",
+            "updateKmlDate": "0001-01-01T00:00:00+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "VALDESQU\u00cd-LOS MOLINOS",
+          "destinationStop": {
+            "codStop": "8_20825",
+            "shortCodStop": "20825",
+            "name": "AV.1666-PARQUE DE LAS CIG\u00dcE\u00d1AS",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T17:10:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438409"
+        },
+        {
+          "line": {
+            "codLine": "8__691___",
+            "shortDescription": "691",
+            "description": "691-MADRID (Moncloa)-BECERRIL-NAVACERRADA-VALDESQUI",
+            "codMode": "8",
+            "updateDate": "2016-06-02T09:31:47+02:00",
+            "updateKmlDate": "2016-06-01T17:04:00+02:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "NAVACERRADA (Calle de las Eras)-MADRID (Moncloa)",
+          "destinationStop": {
+            "codStop": "8_17480",
+            "shortCodStop": "17480",
+            "name": "INTERCAMBIADOR DE MONCLOA",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T17:31:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438426"
+        },
+        {
+          "line": {
+            "codLine": "8__692___",
+            "shortDescription": "692",
+            "description": "692-LOS MOLINOS - CERCEDILLA - VALDESQU\u00cd",
+            "codMode": "8",
+            "updateDate": "0001-01-01T00:00:00+01:00",
+            "updateKmlDate": "0001-01-01T00:00:00+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "VALDESQU\u00cd-LOS MOLINOS",
+          "destinationStop": {
+            "codStop": "8_20825",
+            "shortCodStop": "20825",
+            "name": "AV.1666-PARQUE DE LAS CIG\u00dcE\u00d1AS",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T17:42:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438271"
+        },
+        {
+          "line": {
+            "codLine": "8__691___",
+            "shortDescription": "691",
+            "description": "691-MADRID (Moncloa)-BECERRIL-NAVACERRADA-VALDESQUI",
+            "codMode": "8",
+            "updateDate": "2016-06-02T09:31:47+02:00",
+            "updateKmlDate": "2016-06-01T17:04:00+02:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "NAVACERRADA (Calle de las Eras)-MADRID (Moncloa)",
+          "destinationStop": {
+            "codStop": "8_17480",
+            "shortCodStop": "17480",
+            "name": "INTERCAMBIADOR DE MONCLOA",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T18:01:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438442"
+        },
+        {
+          "line": {
+            "codLine": "8__692___",
+            "shortDescription": "692",
+            "description": "692-LOS MOLINOS - CERCEDILLA - VALDESQU\u00cd",
+            "codMode": "8",
+            "updateDate": "0001-01-01T00:00:00+01:00",
+            "updateKmlDate": "0001-01-01T00:00:00+01:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "VALDESQU\u00cd-LOS MOLINOS",
+          "destinationStop": {
+            "codStop": "8_20825",
+            "shortCodStop": "20825",
+            "name": "AV.1666-PARQUE DE LAS CIG\u00dcE\u00d1AS",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T18:12:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438238"
+        },
+        {
+          "line": {
+            "codLine": "8__691___",
+            "shortDescription": "691",
+            "description": "691-MADRID (Moncloa)-BECERRIL-NAVACERRADA-VALDESQUI",
+            "codMode": "8",
+            "updateDate": "2016-06-02T09:31:47+02:00",
+            "updateKmlDate": "2016-06-01T17:04:00+02:00",
+            "nightService": 0,
+            "active": true,
+            "shortItinerary": {},
+            "companyCode": ""
+          },
+          "direction": 2,
+          "destination": "NAVACERRADA (Calle de las Eras)-MADRID (Moncloa)",
+          "destinationStop": {
+            "codStop": "8_17480",
+            "shortCodStop": "17480",
+            "name": "INTERCAMBIADOR DE MONCLOA",
+            "park": 0,
+            "nightLinesService": 0
+          },
+          "time": "2025-03-29T18:31:00+01:00",
+          "codVehicle": "",
+          "codIssue": "9438386"
+        }
+      ]
+    },
+    "linesStatus": {
+      "LineStatus": [
+        {
+          "line": {
+            "codLine": "8__691___",
+            "shortDescription": "691"
+          },
+          "SAEStatus": true
+        },
+        {
+          "line": {
+            "codLine": "8__692___",
+            "shortDescription": "692"
+          },
+          "SAEStatus": true
+        }
+      ]
+    }
+  }
+}
