@@ -29,14 +29,6 @@ const places = [
         url: 'https://meteocercedilla.com/webcams/webcamsur.jpg',
       },
       {
-        name: 'Aparcamiento',
-        providerName: 'Venta Marcelino',
-        providerImage: 'Venta Marcelino Sureste',
-        refreshInterval: 5,
-        delayTime: 0,
-        url: 'https://meteocercedilla.com/webcams/webcamsureste.jpg',
-      },
-      {
         name: 'Refugio',
         providerName: 'Venta Marcelino',
         providerImage: 'Venta Marcelino Norte',
