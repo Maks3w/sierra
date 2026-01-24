@@ -1,0 +1,10 @@
+min_version = '2025.12.12'
+
+[settings]
+# Enable experimental features like lockfiles and paranoid
+experimental = true
+lockfile = true
+locked = true  # Enable locked mode to enforce lockfile for reproducible builds
+
+[tools]
+bun = "latest"
