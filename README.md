@@ -1,15 +1,16 @@
 ## Getting Started
 
-First, run the development server:
-
+### Install environment and dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+mise trust
+mise install
+bun install
+bun run dev
+```
+
+### Run the development server
+```bash
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
