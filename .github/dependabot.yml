@@ -1,0 +1,53 @@
+# Dependabot Update Policy
+# =========================
+#
+# This configuration manages automated dependency updates across the project.
+#
+# Update Schedule:
+# - All ecosystems run weekly on Mondays at 09:00 Europe/London
+# - Cooldown periods help ensure stability:
+#   * Standard updates: 7-day cooldown after release in case the new release
+#     contains some critical bug
+#   * Major version updates: 14-day cooldown after release so proper migration
+#     issues and steps are known. We want to avoid to be the first on discovering
+#     how to migrate to the new major version.
+#
+# Package Ecosystem Notes:
+# - Using "bun" ecosystem for JavaScript/TypeScript dependencies
+# - Note: Dependabot does not yet support automatic security updates for the "bun"
+#   package ecosystem. Security vulnerabilities will not trigger automatic PRs.
+#   Manual monitoring of security advisories is required.
+
+version: 2
+updates:
+    - package-ecosystem: "npm"
+      directory: "/"
+      schedule:
+          interval: "weekly"
+          day: "monday"
+          time: "09:00"
+          timezone: "Europe/London"
+      cooldown:
+          default-days: 7
+          semver-major-days: 14
+      open-pull-requests-limit: 10
+        # Ignore major version updates for @types/node as they need to be in sync
+        # with the Node.JS version used by Vercel
+      ignore:
+          - dependency-name: "@types/node"
+            update-types: ["version-update:semver-major"]
+      # Group dependency updates to reduce PR noise
+      groups:
+          react:
+              patterns:
+                  - "react"
+                  - "react-dom"
+          # Development dependencies
+          eslint:
+              patterns:
+                  - "eslint*"
+      labels:
+          - "dependencies"
+      commit-message:
+          prefix: "chore(deps)"
+          prefix-development: "chore(dev-deps)"
