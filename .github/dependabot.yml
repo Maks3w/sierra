@@ -20,7 +20,8 @@
 
 version: 2
 updates:
-    - package-ecosystem: "npm"
+    # Enable version updates for npm & bun
+    - package-ecosystem: "bun"
       directory: "/"
       schedule:
           interval: "weekly"
