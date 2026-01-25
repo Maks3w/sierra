@@ -20,35 +20,35 @@
 
 version: 2
 updates:
-    # Enable version updates for npm & bun
-    - package-ecosystem: "bun"
-      directory: "/"
-      schedule:
-          interval: "weekly"
-          day: "monday"
-          time: "09:00"
-          timezone: "Europe/London"
-      cooldown:
-          default-days: 7
-          semver-major-days: 14
-      open-pull-requests-limit: 10
-        # Ignore major version updates for @types/node as they need to be in sync
-        # with the Node.JS version used by Vercel
-      ignore:
-          - dependency-name: "@types/node"
-            update-types: ["version-update:semver-major"]
-      # Group dependency updates to reduce PR noise
-      groups:
-          react:
-              patterns:
-                  - "react"
-                  - "react-dom"
-          # Development dependencies
-          eslint:
-              patterns:
-                  - "eslint*"
-      labels:
-          - "dependencies"
-      commit-message:
-          prefix: "chore(deps)"
-          prefix-development: "chore(dev-deps)"
+  # Enable version updates for npm & bun
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
+    cooldown:
+      default-days: 7
+      semver-major-days: 14
+    open-pull-requests-limit: 10
+      # Ignore major version updates for @types/node as they need to be in sync
+    # with the Node.JS version used by Vercel
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: [ "version-update:semver-major" ]
+    # Group dependency updates to reduce PR noise
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+      # Development dependencies
+      eslint:
+        patterns:
+          - "eslint*"
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(dev-deps)"
