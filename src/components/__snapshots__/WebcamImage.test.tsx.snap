@@ -5,7 +5,7 @@ exports[`WebcamImage > handles image error 1`] = `
   data-testid="webcam-image"
 >
   <img
-    alt="Test Webcam"
+    alt="Test Provider - My image"
     data-nimg="1"
     decoding="async"
     height="600"
@@ -35,7 +35,7 @@ exports[`WebcamImage > shows loading state initially 1`] = `
     />
   </div>
   <img
-    alt="Test Webcam"
+    alt="Test Provider - My image"
     data-nimg="1"
     decoding="async"
     height="600"

@@ -30,7 +30,7 @@ describe('WebcamImage', () => {
 
   it('handles image error', async () => {
     render(<WebcamImage webcam={mockWebcam} />);
-    const image = screen.getByAltText(mockWebcam.name);
+    const image = screen.getByAltText(`${mockWebcam.providerName} - ${mockWebcam.providerImage}`);
 
     fireEvent.error(image)
     const component = screen.getByTestId("webcam-image");
