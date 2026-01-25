@@ -52,3 +52,20 @@ updates:
     commit-message:
       prefix: "chore(deps)"
       prefix-development: "chore(dev-deps)"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/London"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore(ci)"
