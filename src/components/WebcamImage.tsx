@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import {Webcam} from "@/types/Places";
 
 interface WebcamImageProps {
@@ -17,6 +17,12 @@ const WebcamImage = ({webcam, className}: WebcamImageProps) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [imageUrl, setImageUrl] = useState(generateFreshUrl(webcam));
+  const refreshInterval = webcam.refreshInterval;
+
+  const refreshHandler = useCallback(() => {
+    setLoading(true);
+    setImageUrl(generateFreshUrl(webcam));
+  }, [webcam]);
 
   const handleImageLoad = () => {
     setLoading(false);
@@ -29,14 +35,9 @@ const WebcamImage = ({webcam, className}: WebcamImageProps) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(refreshHandler, webcam.refreshInterval * 60 * 1000);
+    const interval = setInterval(refreshHandler, refreshInterval * 60 * 1000);
     return () => clearInterval(interval);
-  }, [webcam]);
-
-  const refreshHandler = () => {
-    setLoading(true);
-    setImageUrl(generateFreshUrl(webcam));
-  };
+  }, [refreshHandler, refreshInterval]);
 
   return (
     <div data-testid="webcam-image">
