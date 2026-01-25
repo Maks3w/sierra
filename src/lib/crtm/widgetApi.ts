@@ -37,5 +37,6 @@ export const getStopsTimes = async (stopId: string): Promise<StopTimes> => {
 }
 
 const crtmFetch = async (url: string) => {
+  console.debug('Fetching CRTM API URL:', url);
   return await fetch(url, { signal: AbortSignal.timeout(TIMEOUT) });
 }
