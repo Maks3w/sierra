@@ -45,7 +45,7 @@ export default async function Home({params}: {
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">Redes Sociales</h2>
             <div className="aspect-w-16 aspect-h-9 relative text-center">
-              <a class="twitter-timeline" data-dnt="true" data-theme="dark" href={`https://x.com/${selectedPlace.socialNetwork.twitter}`}>Tweets by {selectedPlace.socialNetwork.twitter}</a> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+              <a className="twitter-timeline" data-dnt="true" data-theme="dark" href={`https://x.com/${selectedPlace.socialNetwork.twitter}`}>Tweets by {selectedPlace.socialNetwork.twitter}</a> <script async src="https://platform.x.com/widgets.js" charSet="utf-8"></script>
             </div>
           </div>
         )}
