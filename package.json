@@ -7,7 +7,7 @@
     "build": "bun --bun next build",
     "start": "bun --bun next start",
     "lint": "bun --bun next lint",
-    "test": "vitest"
+    "test": "vitest run"
   },
   "dependencies": {
     "@use-gesture/react": "^10.3.1",
