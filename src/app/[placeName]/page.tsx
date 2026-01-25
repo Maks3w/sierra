@@ -8,6 +8,7 @@ import {notFound} from "next/navigation";
 import StopTimes from "@/components/crtm/StopTimes";
 import {Suspense} from "react";
 import Section from "@/components/Section";
+import XTimeline from "@/components/XTimeline";
 
 export default async function Home({params}: {
   params: Promise<{ placeName: string }>
@@ -44,8 +45,8 @@ export default async function Home({params}: {
         {selectedPlace.socialNetwork.twitter && (
           <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
             <h2 className="text-lg font-semibold p-4 bg-gray-700 text-white">Redes Sociales</h2>
-            <div className="aspect-w-16 aspect-h-9 relative text-center">
-              <a className="twitter-timeline" data-dnt="true" data-theme="dark" href={`https://x.com/${selectedPlace.socialNetwork.twitter}`}>Tweets by {selectedPlace.socialNetwork.twitter}</a> <script async src="https://platform.x.com/widgets.js" charSet="utf-8"></script>
+            <div className="relative text-center">
+              <XTimeline username={selectedPlace.socialNetwork.twitter} theme="dark" dnt={true} />
             </div>
           </div>
         )}
