@@ -26,7 +26,7 @@ describe('BuscarElementos API', () => {
       caracter: 'acontecimiento'
     };
 
-    const expectedUrl = 'https://infocar.dgt.es/etraffic/BuscarElementos?latNS=40.9&longNS=-3.8&latSW=40.7&longSW=-4.1&zoom=13&accion=getElementos&Camaras=true&SensoresTrafico=true&SensoresMeteorologico=true&Paneles=true&Radares=true&IncidenciasRETENCION=true&IncidenciasOBRAS=true&IncidenciasMETEOROLOGICA=true&IncidenciasPUERTOS=true&IncidenciasOTROS=true&IncidenciasEVENTOS=true&IncidenciasRESTRICCIONES=true&niveles=true&caracter=acontecimiento';
+    const expectedUrl = 'https://infocar.dgt.es/etraffic/BuscarElementos?zoom=13&accion=getElementos&Camaras=true&SensoresTrafico=true&SensoresMeteorologico=true&Paneles=true&Radares=true&IncidenciasRETENCION=true&IncidenciasOBRAS=true&IncidenciasMETEOROLOGICA=true&IncidenciasPUERTOS=true&IncidenciasOTROS=true&IncidenciasEVENTOS=true&IncidenciasRESTRICCIONES=true&niveles=true&caracter=acontecimiento&latNS=40.9&longNS=-3.8&latSW=40.7&longSW=-4.1';
 
     const url = buildBuscarElementosUrl(params);
     expect(url).toBe(expectedUrl);
@@ -41,7 +41,7 @@ describe('BuscarElementos API', () => {
       zoom: 13,
     };
 
-    const expectedUrl = 'https://infocar.dgt.es/etraffic/BuscarElementos?latNS=40.9&longNS=-3.8&latSW=40.7&longSW=-4.1&zoom=13&accion=getElementos&Camaras=true&SensoresTrafico=true&SensoresMeteorologico=true&Paneles=true&Radares=true&IncidenciasRETENCION=true&IncidenciasOBRAS=true&IncidenciasMETEOROLOGICA=true&IncidenciasPUERTOS=true&IncidenciasOTROS=true&IncidenciasEVENTOS=true&IncidenciasRESTRICCIONES=true&niveles=true&caracter=acontecimiento';
+    const expectedUrl = 'https://infocar.dgt.es/etraffic/BuscarElementos?zoom=13&accion=getElementos&Camaras=true&SensoresTrafico=true&SensoresMeteorologico=true&Paneles=true&Radares=true&IncidenciasRETENCION=true&IncidenciasOBRAS=true&IncidenciasMETEOROLOGICA=true&IncidenciasPUERTOS=true&IncidenciasOTROS=true&IncidenciasEVENTOS=true&IncidenciasRESTRICCIONES=true&niveles=true&caracter=acontecimiento&latNS=40.9&longNS=-3.8&latSW=40.7&longSW=-4.1';
 
     const url = buildBuscarElementosUrl(params);
     expect(url).toBe(expectedUrl);

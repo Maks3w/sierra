@@ -1,3 +1,4 @@
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
 import {fireEvent, render, screen} from '@testing-library/react';
 import WebcamImage from './WebcamImage';
 import { Webcam } from '@/types/Places';
