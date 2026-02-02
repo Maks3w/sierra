@@ -33,7 +33,7 @@
     "screenfull": "^6.0.2",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vite-tsconfig-paths": "^6.0.4",
+    "vite-tsconfig-paths": "^6.0.5",
     "vitest": "^4.0.18"
   }
 }
