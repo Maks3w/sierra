@@ -3,7 +3,7 @@ interface InfonieveWidgetProps {
 }
 
 const InfonieveWidget = ({estacion}: InfonieveWidgetProps) => {
-  const iframeSrc = `https://www.infonieve.es/widgets/estado-estacion.php?width=299&estacion=${estacion}&bgcolor=D2D2D2&txtcolor=000000&target=top`;
+  const iframeSrc = `/infoNieveProxy?estacion=${estacion}`;
 
   return (
     <iframe
