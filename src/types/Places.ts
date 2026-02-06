@@ -6,6 +6,7 @@ export interface Webcam {
     delayTime: number;
     url: string;
     needsProxy?: boolean;
+    headers?: Record<string, string>;
 }
 
 export interface SocialNetwork {

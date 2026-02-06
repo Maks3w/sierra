@@ -54,6 +54,34 @@ describe('imageProxy route', () => {
       allowedUrl + '?t=123',
       expect.objectContaining({
         responseType: 'arraybuffer',
+        headers: {},
+      })
+    );
+  });
+
+  it('passes custom headers when defined in webcam config', async () => {
+    // Mock axios response
+    const mockImageData = Buffer.from('fake-image-data');
+    vi.mocked(axios.get).mockResolvedValue({
+      data: mockImageData,
+      status: 200,
+      headers: {
+        'content-type': 'image/jpeg',
+      },
+    });
+
+    const allowedUrl = 'https://meteosierra.com/cams/puerto/webcam.jpg';
+    const request = new NextRequest(`http://localhost:3000/imageProxy?url=${encodeURIComponent(allowedUrl + '?t=123')}`);
+    const response = await GET(request);
+
+    expect(response.status).toBe(200);
+    expect(vi.mocked(axios.get)).toHaveBeenCalledWith(
+      allowedUrl + '?t=123',
+      expect.objectContaining({
+        responseType: 'arraybuffer',
+        headers: {
+          'Referer': 'https://meteosierra.com/estaciones/puerto-de-navacerrada/',
+        },
       })
     );
   });

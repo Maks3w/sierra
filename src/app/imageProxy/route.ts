@@ -2,8 +2,6 @@ import axios from 'axios';
 import {NextRequest, NextResponse} from "next/server";
 import { webcamsWithProxy } from '@/config/placesConfig';
 
-const validWebcams = webcamsWithProxy.map(webcam => webcam.url.split('?')[0]);
-
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const url = searchParams.get('url');
@@ -16,9 +14,9 @@ export async function GET(request: NextRequest) {
   }
 
   const urlWithoutTimestamp = url.split('?')[0];
-  const isAllowed = validWebcams.some(allowedUrl => urlWithoutTimestamp === allowedUrl);
+  const webcam = webcamsWithProxy.find(w => w.url.split('?')[0] === urlWithoutTimestamp);
 
-  if (!isAllowed) {
+  if (!webcam) {
     return NextResponse.json(
       { error: 'URL not allowed' },
       { status: 403 }
@@ -27,11 +25,13 @@ export async function GET(request: NextRequest) {
 
   const res = await axios.get(url, {
     responseType: 'arraybuffer',
+    headers: webcam.headers || {},
   });
+
   return new NextResponse(res.data, {
     status: res.status,
     headers: {
-      'Content-Type': res.headers['content-type'],
+      'Content-Type': res.headers['content-type'] || 'image/jpeg',
     },
   });
 }
