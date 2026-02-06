@@ -93,6 +93,18 @@ const places: Place[] = [
         needsProxy: true,
       },
       {
+        name: 'Estacion de Tren',
+        providerName: 'Meteosierra',
+        providerImage: 'Puerto de Navacerrada',
+        refreshInterval: 5,
+        delayTime: 0,
+        url: 'https://meteosierra.com/cams/puerto/webcam.jpg',
+        needsProxy: true,
+        headers: {
+          'Referer': 'https://meteosierra.com/estaciones/puerto-de-navacerrada/',
+        },
+      },
+      {
         name: 'Fuente de los Geólogos',
         providerName: 'DGT',
         providerImage: 'M-601 PK 18.5 D',
