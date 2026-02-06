@@ -1,5 +1,4 @@
 import axios from 'axios';
-import * as https from "node:https";
 import {NextRequest, NextResponse} from "next/server";
 import places from '@/config/placesConfig';
 
@@ -21,9 +20,6 @@ export async function GET(request: NextRequest) {
   }
 
   const res = await axios.get(`https://www.infonieve.es/widgets/estado-estacion.php?width=299&estacion=${estacion}&bgcolor=D2D2D2&txtcolor=000000&target=top`, {
-    httpsAgent: new https.Agent({
-      rejectUnauthorized: false,
-    }),
     responseType: 'arraybuffer',
   });
   return new NextResponse(res.data, {
