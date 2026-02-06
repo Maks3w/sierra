@@ -12,6 +12,16 @@ const mockWebcam: Webcam = {
   delayTime: 0,
 };
 
+const mockWebcamWithProxy: Webcam = {
+  name: 'Test Webcam with Proxy',
+  url: 'https://example.com/webcam-proxy.jpg',
+  refreshInterval: 1,
+  providerName: 'Test Provider',
+  providerImage: 'My image with proxy',
+  delayTime: 0,
+  needsProxy: true,
+};
+
 beforeEach(() => {
   vi.useFakeTimers();
   vi.setSystemTime(new Date('2023-01-01T00:00:00Z'));
@@ -35,5 +45,18 @@ describe('WebcamImage', () => {
     fireEvent.error(image)
     const component = screen.getByTestId("webcam-image");
     expect(component).toMatchSnapshot();
+  });
+
+  it('generates direct URL when needsProxy is false', () => {
+    render(<WebcamImage webcam={mockWebcam} />);
+    const image = screen.getByAltText(`${mockWebcam.providerName} - ${mockWebcam.providerImage}`) as HTMLImageElement;
+    expect(image.src).toBe('https://example.com/webcam.jpg?1672531200000');
+  });
+
+  it('generates proxy URL when needsProxy is true', () => {
+    render(<WebcamImage webcam={mockWebcamWithProxy} />);
+    const image = screen.getByAltText(`${mockWebcamWithProxy.providerName} - ${mockWebcamWithProxy.providerImage}`) as HTMLImageElement;
+    expect(image.src).toContain('/imageProxy?url=');
+    expect(image.src).toContain(encodeURIComponent('https://example.com/webcam-proxy.jpg'));
   });
 })

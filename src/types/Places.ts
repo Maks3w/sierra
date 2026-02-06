@@ -5,6 +5,7 @@ export interface Webcam {
     refreshInterval: number;
     delayTime: number;
     url: string;
+    needsProxy?: boolean;
 }
 
 export interface SocialNetwork {

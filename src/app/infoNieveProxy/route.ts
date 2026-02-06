@@ -1,10 +1,9 @@
 import axios from 'axios';
 import {NextRequest, NextResponse} from "next/server";
-import places from '@/config/placesConfig';
+import { placesWithInfoNieve } from '@/config/placesConfig';
 
 // Extract valid estacion codes from placesConfig
-const validEstaciones = places
-  .filter(place => place.infoNieve !== undefined)
+const validEstaciones = placesWithInfoNieve
   .map(place => place.infoNieve!.toString());
 
 export async function GET(request: NextRequest) {

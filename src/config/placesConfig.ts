@@ -1,6 +1,6 @@
-import {PublicTransportDirection, PublicTransportType} from "@/types/Places";
+import {Place, PublicTransportDirection, PublicTransportType} from "@/types/Places";
 
-const places = [
+const places: Place[] = [
   {
     name: 'Cotos',
     webcams: [
@@ -89,8 +89,8 @@ const places = [
         providerImage: 'El Telégrafo',
         refreshInterval: 5,
         delayTime: 10,
-        // url: 'https://puertonavacerrada.com/webcam/WEBcamTeleg.jpg',
-        url: '/imageProxy',
+        url: 'https://puertonavacerrada.com/webcam/WEBcamTeleg.jpg',
+        needsProxy: true,
       },
       {
         name: 'Fuente de los Geólogos',
@@ -215,3 +215,6 @@ const sortedPlaces = [
 ]
 
 export default sortedPlaces;
+
+export const placesWithInfoNieve = places.filter(place => place.infoNieve !== undefined);
+export const webcamsWithProxy = places.flatMap(place => place.webcams.filter(webcam => webcam.needsProxy));

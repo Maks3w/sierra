@@ -10,7 +10,14 @@ interface WebcamImageProps {
 }
 
 const generateFreshUrl = (webcam: Webcam) => {
-  return `${webcam.url}?${new Date().getTime()}`;
+  const timestamp = new Date().getTime();
+
+  if (webcam.needsProxy) {
+    const encodedUrl = encodeURIComponent(`${webcam.url}?${timestamp}`);
+    return `/imageProxy?url=${encodedUrl}`;
+  }
+
+  return `${webcam.url}?${timestamp}`;
 }
 
 const WebcamImage = ({webcam, className}: WebcamImageProps) => {
