@@ -47,6 +47,12 @@ updates:
       eslint:
         patterns:
           - "eslint*"
+      development-dependencies:
+        dependency-type: "development"
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
     labels:
       - "dependencies"
     commit-message:
